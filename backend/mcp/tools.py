@@ -2,9 +2,6 @@ import sys
 import os
 from dataclasses import dataclass
 from typing import Dict, Any, Callable
-from datetime import datetime, timedelta
-import dateparser
-from tzlocal import get_localzone
 
 # Add the backend directory to path for proper imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -19,11 +16,8 @@ class Tool:
     handler: Callable[[Dict[str, Any]], Any]
 
 
-# Read helpers
-from Events.event_reader import list_events_from_db
-
-# Write helpers
-from Events.event_updator import create_event, modify_event, delete_event, sync_google_events
+from backend.Events.event_reader import list_events_from_db
+from backend.Events.event_updator import create_event, modify_event, delete_event, sync_google_events
 
 list_events_tool = Tool(
     name="list_events",

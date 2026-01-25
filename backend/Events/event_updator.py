@@ -15,8 +15,8 @@ SCOPES = ["https://www.googleapis.com/auth/calendar"]
 # Paths for various files
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_FILE = os.path.join(SCRIPT_DIR, "calendar.db")
-TOKEN_PATH = os.path.join(SCRIPT_DIR, "../../special/token.json")
-CREDENTIALS_PATH = os.path.join(SCRIPT_DIR, "../../special/credentials.json")
+TOKEN_PATH = os.path.join(SCRIPT_DIR, "../special/token.json")
+CREDENTIALS_PATH = os.path.join(SCRIPT_DIR, "../special/credentials.json")
 
 
 # ------------------------

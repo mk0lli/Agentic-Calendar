@@ -7,10 +7,11 @@ from Events.event_updator import (
     modify_event,
     create_event,
     delete_event,
-    sync_google_events
+    sync_google_events,
+    init_db
 )
 # MCP imports
-from special.agent import Agent
+from mcp.agent import Agent
 from mcp.tools import (
     list_events_tool,
     create_event_tool,
@@ -19,12 +20,19 @@ from mcp.tools import (
     sync_events_tool,
     resolve_relative_time_tool
 )
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, session, redirect
+import os
 
 app = Flask(__name__)
 CORS(app)
 load_dotenv()
-DATABASE = '/Users/mohitkolli/PycharmProjects/calendar/backend/Events/calendar.db'
+
+# Initialize database
+init_db()
+
+# Get the correct database path from event_updator
+from Events import event_updator
+DATABASE = event_updator.DB_FILE
 
 
 def get_db():
