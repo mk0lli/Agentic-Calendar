@@ -338,7 +338,7 @@ tools = [
 #    tools = tools
 #)
 
-# Pick Xiaomi MIMO free model
+# Pick Xiaomi MIMO free model: xiaomi/mimo-v2-flash:free
 openrouter_model = "xiaomi/mimo-v2-flash:free"
 
 backend = OpenRouterBackend(
