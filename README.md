@@ -1,6 +1,6 @@
 # Agentic Calendar
 
-An AI-powered calendar management system that combines a local calendar database with Google Calendar synchronization, powered by an intelligent agent using Model Context Protocol (MCP) for natural language event management.
+An AI-powered calendar management system that combines a local calendar database with Google Calendar synchronization, powered by an intelligent agent using Model Context Protocol (MCP) for natural language event management. The agent relies on credentials from OpenRouter, allowing the agent to be modified to user needs.
 
 ## Table of Contents
 
